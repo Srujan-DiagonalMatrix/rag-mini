@@ -1,4 +1,4 @@
-from embeddings import get_embedding_model
+from embeddings import get_embading_model
 from langchain_community.vectorstores import VectorStore
 from langchain_community.vectorstores import FAISS
 from langchain_core.documents import Document
@@ -22,7 +22,14 @@ class VectorStoreManager():
     def exists(persist_path) -> bool:
         None
 
-docs = [Document(page_content="RAG uses embeddings for semantic search")]
+docs = [
+    Document(page_content="RAG uses embeddings for semantic search"),
+    Document(page_content="FAISS stores vectors locally.")
+    ]
 
-res = VectorStoreManager.buildFromDocuments(docs=docs, embeddings=get_embedding_model(provider="ollama", text="RAG uses embeddings for semantic search"), dbType="faiss")
-print(res)
+embeddings = get_embading_model(provider="ollama")
+print(embeddings)
+
+
+# res = VectorStoreManager.buildFromDocuments(docs=docs, embeddings=get_embedding_model(provider="ollama", text="RAG uses embeddings for semantic search"), dbType="faiss")
+# print(res)
