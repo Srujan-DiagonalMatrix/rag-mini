@@ -1,0 +1,94 @@
+BeiLe Jia 								
+Newcastle upon Tyne, UK
+Professional Summary
+    • Seasoned Full-Stack Developer with over 10+ years of experience in web development, front-end technologies, and software engineering, specializing in modern frameworks like React, Vue, Angular, and back-end development using Java, Python, and Spring Framework.
+    • Proficient in Database Systems such as Oracle, MySQL, and SQL Server, with expertise in designing and optimizing database architectures and implementing efficient data handling and performance tuning techniques.
+    • Cloud and DevOps Expertise with hands-on experience in AWS, Azure, and continuous integration/continuous delivery (CI/CD) pipelines, ensuring seamless deployment and scalability of applications.
+    • Experienced in Full-Stack Development, including dynamic UI design with HTML5, CSS3, and JavaScript frameworks, and robust back-end solutions using Node.js, ASP.NET, and Spring Boot.
+    • Skilled in Data Engineering and Visualization, with proficiency in Python for ETL/ELT pipelines, data processing, and enhancing visualization tools like Grafana and Superset for intuitive user interfaces.
+    • Strong Agile Practitioner, adept at working in collaborative, cross-functional teams, and delivering high-quality solutions under tight deadlines. Extensive experience in testing methodologies, including unit, integration, and performance testing.
+    • Key Contributions in Industry Domains, including e-commerce, bioinformatics, and big data analytics, driving system enhancements and optimizing data pipelines to improve operational efficiency.
+    • Multilingual and Culturally Adaptable, fluent in English and Chinese, ensuring effective communication in global teams. Currently based in Newcastle upon Tyne, UK, with a graduate visa and full working rights.
+IT Skills
+
+Front-End Development
+React, Vue, Angular, HTML5, CSS3, JavaScript, TypeScript, Responsive UI Design
+Back-End Development
+Spring Framework, Spring Boot, ASP.NET, Node.js, Python, Java, C#, .NET
+Database Management
+Oracle, MySQL, SQL Server, PostgreSQL, Entity Framework, Database Optimization, Stored Procedures
+Data Engineering
+Python (pandas, NumPy), ETL/ELT Pipelines, Data Visualization (Grafana, Superset), SQL, Data Processing with Big Data Frameworks
+Cloud
+AWS (EC2, S3, Redshift, Lambda), Azure (Blob, Data Lake, Cosmos DB), Cloud Migration, Performance Tuning
+DevOps and CI/CD
+Jenkins, Docker, Kubernetes, Git, CI/CD Pipelines
+Big Data Ecosystem
+Spark, Spark SQL, Streaming, Hadoop, HDFS, Yarn, Hive, Kafka, Airflow
+Tools and Collaboration
+Confluence, Jira, Postman, Figma, Visual Studio Code, IntelliJ IDEA
+Programming Languages
+Python, Java, C#, C++, Scala, PHP, JavaScript, TypeScript
+Frameworks & Libraries
+React, Angular, Vue, Spring Boot, ASP.NET, Node.js
+Other Skills
+Agile Methodologies, Data Validation, Performance Testing, Unit and Integration Testing.
+ERP - SAP ECC, SAP CRM, Salesforce.com, SAP Utilities
+Education
+    • Master of Science in Computer Science – Northumbria University, Newcastle upon Tyne, UK (September 2022 – February 2024)
+    • Bachelor of Science in Computer Science – Beijing University of Technology, Beijing, China (September 2009 – September 2013)
+Career History
+[September 2023 – Till Date] Full-Stack Developer – Diagonal Matrix, Newcastle upon Tyne, UK
+Full stack development
+    • Integrated specific database connections and implemented query request features based on user needs.
+    • Enhanced user interface and experience, providing technical support and troubleshooting for end-users.
+    • Debugged and optimized features embedded large-scale displays, and improved data visualization techniques.
+    • Conducted user testing and implemented improvements based on feedback.
+    • Integrated SQL Server databases, developed data processing pipelines, and ensured data compatibility.
+    • Collaborated with bioinformatics experts to tailor applications for specific research needs.
+    • Conducted debugging, optimized data handling and visualization processes, and implemented new features.
+    • Trained users on new features and provided documentation for best practices.
+    • Develop and enhance existing product suite, focusing on backend development with C#, MVC, and SQL.
+    • Implement and maintain backend services and database management.
+    • Support front-end development with Bootstrap and React as needed.
+    • Ensure solutions are resilient and scalable to handle large amounts of data.
+    • Implement secure coding practices and maintain cybersecurity awareness.
+    • Strong experience with .NET (C#), MVC, and SQL.
+    • Knowledge of frontend technologies including Bootstrap and basic React.
+    • Experience with database design and management.
+
+ [October 2020 – August 2022] Software Developer – Chinasoft Hangzhou Anren Network, Beijing, China
+Software Development
+    • Employee Information Management System:
+    • Designed backend architecture using Spring Boot and managed MySQL database.
+    • Performed unit, integration, and performance testing for optimal efficiency.
+    • Big Data Processing Application:
+    • Designed and implemented solutions using Python and collaborated on data analysis and testing.
+    • Desktop Application for Workflow Data Collection:
+    • Developed applications using .NET, ensuring seamless integration with other systems.
+    • Oracle Database Optimization:
+    • Optimized stored procedures and SQL code, enhancing performance and reliability.
+    • Cloud Platform Migration:
+    • Assessed and executed migration strategies for AWS and Azure, ensuring a seamless transition.
+ [April 2019 – October 2020] Front-End Developer – Beijing YLEast Information Technology, Beijing, China
+Front-end development
+    • Developed dynamic user interfaces using React, Angular, and Vue.
+    • Collaborated with backend teams to integrate APIs and ensure data consistency.
+    • Enhanced project workflows and resolved technical issues through collaborative efforts.
+    • Design and implement modern, responsive web interfaces using HTML5, CSS3, and JavaScript.
+    • Leverage Knockout.js to build interactive and dynamic front-end features.
+    • Apply expertise in LESS or SASS for efficient styling, and use tools like Grunt, Gulp, or Webpack to streamline development processes.
+    • Customize and manage Magento’s layout XML and templating system to meet project requirements.
+    • Develop and fine-tune Magento themes to deliver exceptional performance and seamless user experiences.
+ [February 2013 – February 2019] Web Developer – BHYT (Bo Hai Yun Tone Education), Beijing, China
+Web Development
+    • Designed responsive user interfaces and implemented backend services using Java and ASP.NET.
+    • Developed applications for e-commerce platforms and real-time communication systems.
+    • Mentored junior developers and optimized database systems for performance and scalability.
+    • Create and optimize dynamic web applications using HTML, CSS, JavaScript, and jQuery.
+    • Design and manage database solutions with a focus on MySQL.
+    • Develop and integrate RESTful APIs to enable efficient communication between systems.
+    • Maintain code repositories using version control tools for streamlined collaboration.
+    • Analyze and resolve technical challenges with precision and attention to detail.
+    • Prioritize website performance improvements and implement robust security measures.
+    • Collaborate effectively in team environments while maintaining the ability to work independently.
