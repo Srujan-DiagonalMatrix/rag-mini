@@ -1,2 +1,1 @@
-# rag-mini
-This is a mini RAG application.
+This is a sample RAG Project for the beginners.
