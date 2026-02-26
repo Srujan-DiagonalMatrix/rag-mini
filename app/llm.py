@@ -1,3 +1,6 @@
+###############################################
+# This supplies the LLM details.
+###############################################
 from dotenv import load_dotenv
 load_dotenv()
 
