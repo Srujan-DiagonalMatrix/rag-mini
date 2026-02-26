@@ -35,6 +35,8 @@ def splitDocuments(docs: list[Document],
 
     if not chunks:
         raise ValueError("No chunks created.")
+    
+    return chunks
 
 
 def buildIndex(chunks: list[Document], dbtype: str = "faiss"):
