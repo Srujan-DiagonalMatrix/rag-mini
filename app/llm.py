@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def getllm(provide: str) -> str:
-    openAi = "CKzbnIZq900ZOFqMJMZE90sCUI7lRwxYLzfxSrqmZUg3t0MSDatIJQQJ99BEACYeBjFXJ3w3AAAAACOG9Rqx"
+    openAi = ""
     ollama = "http://localhost:11434/api/embeddings"
 
     if provide == "openAi":
