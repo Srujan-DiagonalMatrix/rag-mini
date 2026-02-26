@@ -68,8 +68,8 @@ def runIngestion(dataDir: str = "./data",
     return store
     
 
-if __name__ == "__main__":
-    store = runIngestion(dataDir="/home/srujan/Documents/repo/rag-mini/data/", persist_path="./vector_db", dbtype="faiss", chunk_size=500, chunk_overlap=50)
-    res = store.similarity_search(query="What is this document about?", k=2)
-    for n in res:
-        print(n.page_content)
+# if __name__ == "__main__":
+#     store = runIngestion(dataDir="/home/srujan/Documents/repo/rag-mini/data/", persist_path="./vector_db", dbtype="faiss", chunk_size=500, chunk_overlap=50)
+#     res = store.similarity_search(query="What is this document about?", k=2)
+#     for n in res:
+#         print(n.page_content)
