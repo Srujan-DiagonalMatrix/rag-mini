@@ -26,3 +26,27 @@ app/
 └── vectorstore.py ✅ already
 
 (You can keep fewer files, but this split makes each module single-purpose.)
+
+
+##### 🎯 WHAT YOU SHOULD BUILD NEXT (Simple Order) #####
+
+Follow this exact order:
+
+Step 2 → Implement Retrieval in rag_pipeline.py
+Build: retrieve(question)
+Test it alone.
+
+Step 3 → Implement Generation
+Add:
+generate_answer()
+Test it with fake context first.
+
+Step 4 → Create Unified Function
+ask(question)
+Test end-to-end.
+
+Step 5 → Add CLI
+Use argparse.
+
+Step 6 → Add FastAPI
+Only after CLI works.
