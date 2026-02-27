@@ -18,8 +18,8 @@ def getllm(provide: str) -> str:
 def get_ollama_embeddings_url() -> str:
     pass
 
-def get_openai_client() -> OpenAIClient:
-    pass
+# def get_openai_client() -> OpenAIClient:
+#     pass
 
 def call_openai_chat(messages: list[dict], model: str, temperature: float, max_tokens: int) -> str:
     pass
