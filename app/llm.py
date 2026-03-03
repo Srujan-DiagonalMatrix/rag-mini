@@ -13,6 +13,8 @@ def getllm(provide: str) -> str:
 
     if provide == "ollama":
         return os.getenv("OLLAMA_EMBEDDINGS").strip()
+    elif provide == "openAi":
+        return os.getenv("OPENAI_BASE_URL").strip()
     else:
         raise ValueError("Invalid provider specified. Choose 'openAi' or 'ollama'.")
 
