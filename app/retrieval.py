@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+from typing import Optional, List
 from langchain_core.documents import Document
 from dataclasses import dataclass
 from embeddings import get_embeding_model
@@ -10,15 +13,16 @@ class AppConfig:
     persist_path: str = "./vector_db"
     db_type: str = "faiss"
     top_k: int = 2
+    provider: str = "ollama"
 
-class RagPipeline:
+class Retriever:
     """
     This is a semantic search retrival function that retrieves relevant context from faiss vector DB.
     This doesn't generate answers, just retrives the suitable context/content.
     """
-    def __init__(self, config: AppConfig):
-        self.config = config
-        self.embeddings = get_embeding_model(provider="ollama")
+    def __init__(self, config: Optional[AppConfig] = None):
+        self.config = config or AppConfig()
+        self.embeddings = get_embeding_model(provider=self.config.provider)
 
         if VectorStoreManager.exists(self.config.persist_path):
             self.store = VectorStoreManager.load(embeddings=self.embeddings, persist_path=self.config.persist_path, dbtype=self.config.db_type)
@@ -30,11 +34,12 @@ class RagPipeline:
                                       )
             self.store_status = "created"
     
-    def retrieve(self, question: str) -> list[Document]:
+    def retrieve(self, question: str, top_k: Optional[int] = None) -> list[Document]:
         if not question or not question.strip():
             raise ValueError("Question is empty")
         
-        return self.store.similarity_search_with_score(query=question, k=self.config.top_k)
+        docs = self.store.similarity_search(query=question, fetch_k=top_k)
+        return docs #self.store.similarity_search_with_score(query=question, k=self.config.top_k)
     
     def retrieve_with_score(self, question: str) -> list[tuple[Document, float]]:
 

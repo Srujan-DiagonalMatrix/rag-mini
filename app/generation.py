@@ -1,5 +1,7 @@
+from __future__ import annotations
+
 from typing import Optional
-from prompts import build_messages
+from prompts import build_messages, FALLBACK_IDE
 from llm import call_openai_chat
 from pydantic.dataclasses import dataclass
 
@@ -51,13 +53,13 @@ class AnswerGenerator:
         answer = self._normalize_text(answer)
         return answer or self.cofig.empty_context_fallback
 
-if __name__ == "__main__":
-    fake_context = """
-    RAG stands for Retrieval-Augmented Generation.
-    It retrieves relevant chunks and gives them as context to an LLM to produce grounded answers.
-    If the answer isn't in the context, the system should say it does not know.
-    """.strip()
+# if __name__ == "__main__":
+#     fake_context = """
+#     RAG stands for Retrieval-Augmented Generation.
+#     It retrieves relevant chunks and gives them as context to an LLM to produce grounded answers.
+#     If the answer isn't in the context, the system should say it does not know.
+#     """.strip()
 
-    gen = AnswerGenerator()
-    question = "What does RAG stands for and how does it work?"
-    print(gen.generate_answer(question=question, context=fake_context))
+#     gen = AnswerGenerator()
+#     question = "What does RAG stands for and how does it work?"
+#     print(gen.generate_answer(question=question, context=fake_context))
