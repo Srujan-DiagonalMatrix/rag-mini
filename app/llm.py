@@ -42,13 +42,6 @@ def call_openai_chat(messages: list[dict], model: str, temperature: float, max_t
 
     url = f"{base_url}/openai/deployments/{deployment}/chat/completions?api-version={api_version}"
 
-    # if base_url.endswith("/v1"):
-    #     url = f"{base_url}/chat/completions"
-    # else:
-    #     url = f"{base_url}/v1/chat/completions"
-
-    #url = base_url
-
     headers = {
         "api-key": api_key,
         "Content-Type": "application/json",
