@@ -3,23 +3,91 @@
 ##############################################
 
 from ingestion import runIngestion
+from pydantic.dataclasses import dataclass
+from typing import Optional
+from retrieval import Retriever, RetriverConfig
+from generation import AnswerGenerator, GenerationConfig
+from vectorstore import VectorStoreManager
+from llm import check_openai_ready
+from langchain_core.documents import Document
+
+@dataclass
+class AppConfig:
+    data_dir: str = "./data"
+    persist_path: str = "./vector_db"
+    db_type: str = "faiss"
+    top_k: int = 3
+    openai_model: str = "gpt-4o-mini"
+    temperature: float = 0.0
+    max_tokens: int = 500
+
 
 class RagPipeline():
 
-    def __init__(self, config: AppConfig):
+    def __init__(self, config: Optional[AppConfig] = None):
         """wires up Retriever + AnswerGenerator"""
-        pass
+        self.config = config or AppConfig()
 
-    def ask(self, question: str) -> str:
+        self.retriver = Retriever(RetriverConfig(persist_path=self.config.persist_path,
+                                 db_type=self.config.db_type,
+                                 top_k=self.config.top_k,
+                                 provider="ollama"))
+        
+        self.generator = AnswerGenerator(GenerationConfig(model=self.config.openai_model,
+                                         temperature=self.config.temperature,
+                                         max_tokens=self.config.max_tokens))
+
+    def ingest(self) -> dict[str, any]:
+        """returns status: created/loaded, doc count, chunk count"""
+        store = runIngestion(dataDir=self.config.data_dir, 
+                             persist_path=self.config.persist_path,
+                             dbtype=self.config.db_type)
+        
+        return{
+            "status": "loaded" if VectorStoreManager.exists(self.config.persist_path) else "created",
+            "persist_path":self.config.persist_path,
+            "dbtype":self.config.db_type,
+            "store_type": type(store).__name__
+        }
+    
+    def health(self) -> dict[str, any]:
+        """checks: vector DB exists, Ollama reachable (optional ping), OpenAI key present"""
+        return{
+            "vector_db_exists": VectorStoreManager.exists(self.config.persist_path),
+            "openai_ready": check_openai_ready()
+        }
+    
+    def _build_sources(self, docs: list[Document], preview_chars: int = 200) -> list[dict]:
+        sources = []
+
+        for i, d in enumerate(docs):
+            meta = d.metadata or {}
+            source = meta.get("source") or meta.get("file_path") or meta.get("filename") or "unknown"
+            preview = (d.page_content or "").strip().replace("\n","")
+            sources.append(
+                {"rank": i + 1,
+                 "source": source,
+                 "preview": preview,
+                 "metadata": meta}
+            )
+        
+        return sources
+
+    def ask(self, question: str, top_k: Optional[int] = None) -> dict[str, any]:
         """calls retrieve() → builds context → calls generate_with_sources()
         returns response dict (answer + sources + timings)"""
-        pass
+        q = (question or "").strip()
+        if not q:
+            raise ValueError("Question can't be empty.")
+        
+        docs = self.retriver.retrieve(question=q, top_k=top_k)
+        context = self.retriver.format_context(docs=docs)
 
-    def health(self) -> dict:
-        """checks: vector DB exists, Ollama reachable (optional ping), OpenAI key present"""
-        pass
+        answer = self.generator.generate_answer(question=q, context=context)
 
-    def ingest(self) -> dict:
-        """returns status: created/loaded, doc count, chunk count"""
-        store = runIngestion()
-    
+        return {
+            "question":q,
+            "answer":answer,
+            "sources":self._build_sources(docs=docs),
+            "top_k": top_k if top_k is not None else self.config.top_k           
+        }
