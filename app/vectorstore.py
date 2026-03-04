@@ -6,7 +6,7 @@ from langchain_core.embeddings import Embeddings
 from langchain_community.vectorstores import FAISS
 import os
 from typing import List, Optional
-from embeddings import get_embeding_model
+from app.embeddings import get_embeding_model
 
 class VectorStoreManager:
     """
@@ -69,32 +69,20 @@ class VectorStoreManager:
 
 
 # if __name__ == "__main__":
-     
-#      docs = [
-#           Document(page_content="RAG uses embeddings for semantic search."),
-#           Document(page_content="I am getting confidence in programming"),
-#           Document(page_content="I can connect the dots well.")
-#      ]
 
-#      embeddings = get_embeding_model("ollama")
+#     docs = [
+#         Document(page_content="RAG uses embeddings for semantic search.", metadata={"source": "mem"}),
+#         Document(page_content="FAISS stores vectors locally.", metadata={"source": "mem"}),
+#     ]
 
-#      store = VectorStoreManager.buildFromDocuments(docs, embeddings, dbtype="faiss")
-#      print("Vector store built!")
+#     embeddings = get_embeding_model("ollama")
+#     store = VectorStoreManager.buildFromDocuments(docs, embeddings, "faiss")
 
-#      results = store.similarity_search(query="What is RAG?", k=2)
-#      print("\nTop Matches(in-memory)")
-#      for r in results:
-#           print(r.page_content)
+#     print("Search result:", store.similarity_search("What stores vectors?", k=1)[0].page_content)
 
-#      persist_path = "./vector_db"
-#      VectorStoreManager.save(store=store, persist_path=persist_path)
-#      print(f"Saved at the persist_path {persist_path}")
+#     persist_path = "./vector_db_test"
+#     VectorStoreManager.save(store, persist_path)
+#     print("Saved:", VectorStoreManager.exists(persist_path))
 
-#      loaded_store = VectorStoreManager.load(embeddings, persist_path, "faiss")
-#      print("loaded store")
-
-#      results2 = store.similarity_search(query="Where are vectors stored?", k=2)
-#      for r in results2:
-#           print(r.page_content)
-
-
+#     store2 = VectorStoreManager.load(embeddings, persist_path, "faiss")
+#     print("Loaded search:", store2.similarity_search("What is RAG?", k=1)[0].page_content)

@@ -3,9 +3,9 @@ from __future__ import annotations
 from typing import Optional, List
 from langchain_core.documents import Document
 from dataclasses import dataclass
-from embeddings import get_embeding_model
-from vectorstore import VectorStoreManager
-from ingestion import runIngestion
+from app.embeddings import get_embeding_model
+from app.vectorstore import VectorStoreManager
+from app.ingestion import runIngestion
 
 @dataclass
 class RetriverConfig:
@@ -98,21 +98,9 @@ class Retriever:
 
 
 # if __name__ == "__main__":
-#     cfg = AppConfig(data_dir="./data",
-#                     persist_path="./vector_db",
-#                     db_type="faiss",
-#                     top_k=2)
-    
-#     rag = RagPipeline(cfg)
-#     print("Health: ", rag.health())
-
-#     question = "What is this document is all about?"
-#     docs = rag.retrieve(question=question)
-#     for doc in docs:
-#         print("The doc is --> ", doc)
-    
-#     score = rag.retrieve_with_score(question=question)
-#     for ques_score in score:
-#         print("the score is --> ", ques_score[1])
-
-    
+#     r = Retriever()
+#     docs = r.retrieve("What does RAG stand for?", top_k=3)
+#     print("Docs returned:", len(docs))
+#     print("Top preview:", docs[0].page_content[:120])
+#     ctx = r.format_context(docs)
+#     print("Context chars:", len(ctx))  

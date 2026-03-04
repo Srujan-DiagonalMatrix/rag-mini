@@ -1,7 +1,7 @@
 ##########################################
 # This program generates embeddings, converts documents into embeddings.
 ##########################################
-from llm import getllm
+from app.llm import getllm
 import requests
 from langchain_core.embeddings import Embeddings
 
@@ -31,3 +31,10 @@ class OllamaEmbeddings(Embeddings):
 # This function creates the class object.
 def get_embeding_model(provider: str = "ollama") -> Embeddings:
     return OllamaEmbeddings(provider=provider)
+
+
+# if __name__ == "__main__":
+#     emb = get_embeding_model()
+#     v = emb.embed_query("Hello world")
+#     print ("Vector length:", len(v))
+#     print ("First 5:", v[:5])

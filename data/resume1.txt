@@ -1,0 +1,88 @@
+Mera naam joker 								candidate_email@gmail.com
+Reading, UK
+
+Professional Summary
+    • LLM, Agentic AI, MCP, Generative AI Architect & Developer, valid SC Cleared with 18+ years of IT experience, specializing in the development, fine-tuning, and deployment of GenAI systems using GPT, LLaMA, BERT, and T5.
+    • Expert in building autonomous LangChain-based agents with memory, tool use, and planning using Azure AI Foundry, Azure OpenAI, and AWS Bedrock.
+    • Designed and deployed Retrieval-Augmented Generation (RAG) pipelines using LangChain, LlamaIndex, FAISS, Pinecone, and ChromaDB for context-aware search and Q\&A systems.
+    • Delivered scalable LLM solutions using Amazon SageMaker, Azure Machine Learning, Kubernetes, and CI/CD pipelines for real-time, production-ready AI services.
+    • Specialized in advanced prompt engineering techniques, including few-shot, zero-shot, and chain-of-thought strategies for domain-specific LLM optimization.
+    • Integrated Agentic AI systems with enterprise data sources, APIs, and cloud services to automate financial research, document processing, and compliance tasks.
+    • Led multi-agent systems development using LangGraph and CrewAI, enabling dynamic collaboration and decision-making for investment and risk scenarios.
+    • Proven leadership in GenAI adoption, delivering secure, compliant, and high-performance AI solutions across cloud-native architectures on Azure and AWS.
+    • Extensive expertise in ETL development, data integration, and orchestration across Azure (ADF, Databricks, Synapse) and AWS (Glue, EMR, Redshift, S3), ensuring scalable and efficient data processing.
+    • Proficient in Databricks & Apache Spark, implementing distributed data processing solutions for large-scale ETL pipelines, optimizing transformations, and enabling real-time & batch data processing.
+    • Hands-on experience in Azure Data Factory (ADF) & AWS Glue, designing and orchestrating end-to-end ETL workflows, integrating structured and semi-structured data from diverse sources (RDBMS, NoSQL, APIs, Blob/S3).
+    • Strong expertise in Spark-based ETL using PySpark, optimizing data transformations, performance tuning, and implementing Delta Lake for reliable data lakes.
+    • Deep understanding of cloud-based data architectures including Data Lakes, Lakehouse, and Data Warehouses (Snowflake, Redshift, Synapse) with seamless ETL orchestration.
+    • Expert in monitoring, logging, and optimizing ETL pipelines, leveraging Azure Monitor, AWS CloudWatch, and Databricks Job Clusters to ensure high availability and fault tolerance.
+    • End-to-end data pipeline automation using Terraform, Infrastructure-as-Code (IaC), and CI/CD for seamless deployment and maintenance of ETL workflows.
+
+IT Skills
+LLM/GenAI – OpenAI GPT, Llama, Mistral, Hugging Face Transformers, TensorFlow, PyTorch, LangChain, Pinecone, FAISS, RAG, Prompt Engineering, Fine-tuning, BERT, T5, NLP, ChatGPT, spaCy, NLTK, Kubernetes, Docker, MLflow, Kubeflow, Weights & Biases, Google Cloud AI, Google Vertex AI, AWS SageMaker, TensorFlow Serving.
+Big Data – Hadoop, HDFS, Spark, Spark SQL, Streaming, MapReduce, Scala, python, pandas, Hive, Pig, Yarn, Sqoop, Kafka, Oozie, Hbase, Flume, CI/CD, airflow, tableau, informatica, Talend, Cloudera, Hortonworks, Confluence, Jira, Jenkins, docker, kubernetes, Tensorflow, Excel, DBA Access and git.
+
+Cloud – Azure OpenAI , Bedrock, Amazon SageMaker, AWS Redshift,AWS Data Pipelines,Amazon S3,Amazon EMR, Azure, Blob, Cosmos DB , Mongodb and Google Cloud.
+ERP - SAP ECC, SAP CRM, Salesforce.com, SAP Utilities
+
+Education
+    • Masters in Business Administration – IT
+
+Career History
+[May’05 – March’06] Morgan Morgan
+Agentic AI Platform Developer & Architect
+
+    • Design, develop, and deploy advanced agentic AI systems capable of autonomous, goal-driven execution, multi-step reasoning, and adaptive decision-making across complex enterprise workflows.
+    • Build and operationalize LLM-powered agents with planning, memory, and tool-use capabilities using Python-based frameworks, enabling agents to reason, act, and learn across long-running processes.
+    • Integrate and orchestrate foundation model ecosystems including OpenAI, Azure AI Foundry, embeddings services, and fine-tuned models for reasoning, summarization, classification, and content generation.
+    • Architect and implement Retrieval-Augmented Generation (RAG) pipelines that combine structured, semi-structured, and unstructured data to ground agent reasoning in real-time enterprise knowledge.
+    • Monitor agent behavior, tool usage, context flow, and decision outcomes using logging, tracing, and observability platforms to ensure reliability and transparency.
+    • Benchmark and optimize agent performance across reasoning quality, hallucination rates, latency, throughput, and token efficiency under real-world workloads.
+    • Apply security, governance, and responsible AI practices including authentication, RBAC, audit logging, data masking, and compliance with enterprise and regulatory standards.
+    • Design prompt templates, agent definitions, and MCP-based abstractions that enable non-technical teams to compose and extend agent workflows safely.
+    • Collaborate closely with product, data, platform, and domain teams to align agent capabilities with business objectives and operational constraints.
+    • Produce clear documentation, reference architectures, and reusable patterns to enable broader adoption of agentic AI and MCP-driven systems across the organization.
+
+[Mar’03 – May’05] Goldman Morgan
+Agentic AI (AI Agents) - Developer/Architect
+
+    • Developed and deployed Agentic AI workflows using LangChain and Azure AI Foundry to automate business processes across investment research, risk analysis, and compliance operations.
+    • Built intelligent agents capable of goal-driven execution using LangChain agents with memory, tools, and planner modules integrated into Azure-hosted applications.
+    • Created internal tooling for business analysts and data teams to author custom agent workflows using prompt templates and LangChain YAML definitions.
+    • Used Azure Monitor and Application Insights to track agent health, performance metrics, and exceptions for continuous operational oversight.
+    • Collaborated with quant research, compliance, and infrastructure teams to align Agentic AI workflows with investment strategies and enterprise controls.
+    • Delivered knowledge transfer sessions and internal documentation for enabling product and analytics teams to build their own LangChain-based agent flows using reusable architecture patterns.
+
+[July’01 – Feb’03] Wells Fargo
+Financial Market Prediction - Developer/Architect
+
+    • Developed and fine-tuned domain-specific Large Language Models (LLMs) for investment research by training on financial news, analyst reports, and historical trade data.
+    • Engineered a Retrieval-Augmented Generation (RAG) pipeline using LangChain and FAISS to surface relevant insights from structured and unstructured financial documents.
+    • Built autonomous agent systems to assist portfolio managers by summarizing macroeconomic trends and generating daily investment briefings.
+    • Led PoCs comparing OpenAI, Claude, and LLaMA 3 models for suitability in multi-turn financial reasoning and report summarization.
+    • Built LLM-driven Q&A systems over internal fund performance reports using LlamaIndex and PostgreSQL vector extensions.
+    • Fine-tuned LLaMA 2/3 and Falcon models with domain-specific datasets from Refinitiv, SEC EDGAR, and in-house trading archives.
+    • Created Jupyter-based evaluation suites to benchmark LLM accuracy, factual consistency, and token cost-efficiency in financial tasks.
+    • Collaborated cross-functionally with quant analysts and economists to co-design LLM workflows aligned with investment models and risk analytics.
+    • Ensured compliance with financial data regulations (e.g., MiFID II, GDPR) when training or inferring with sensitive datasets.
+
+[Jan'19 - Feb’20] Global Banking Client
+Architect & Lead Data Engineer
+    • Analyze system landscape and gather data requirements from stakeholders (business/data analysts, data scientists, architects), optimizing data pipelines for production use cases.
+    • Configure and manage Azure Data Lake (Gen2), Data Factory, Data Bricks, Cosmos DB, and implement ETL processes with PySpark, Pandas, and SQLAlchemy for data ingestion, transformation, and loading.
+    • Develop and implement data models using Hive, Delta Files, and Parquet, while integrating cloud infrastructure, RDBMS, and external applications for data standardization and migration.
+    • Collaborate with business and data teams, ensuring compliance with data governance, security, and quality assurance standards, while offering strategic recommendations for technology solutions.
+
+[Jan'17-Dec'18] Global Retail/e-commerce client
+Architect/Sr. Big Data Engineer/Developer
+    • Design and develop data flows across Cloud, RDBMS, and internal/external applications, including the implementation of Hadoop Data Lake on AWS.
+    • Lead migration from traditional analytics to Hadoop big data and cloud infrastructure, utilizing AWS Redshift, Data Pipelines, S3, and AWS EMR for data processing and storage.
+    • Handle high-velocity, high-volume retail/wholesale store data, working with structured and semi-structured data, and implement ETL processes using Spark, Python, S3, Hive, Airflow, Snowflake, and Sqoop.
+    • Optimize performance, enhance complex Scala programs, and develop data transformation scripts using PySpark, HQL queries, and Spark-SQL while working with Git, Jenkins, CI/CD, and business intelligence tools like Tableau.
+
+[July’04-Dec'06] European Banking Client
+Sr. Big Data Engineer/Developer
+    • Led the design, development, and implementation of a Hadoop data lake for Euro Clear, utilizing HDInsight, Azure Data Factory, and Talend for ETL processes and data transformation in the Azure Data Lake environment.
+    • Worked with various data sources, including relational, semi-structured, and unstructured data, leveraging Azure Blob storage, Cosmos DB, Apache Kafka, Spark, and Hive for streaming, processing, and storing data for analytics.
+    • Developed data transformation scripts using Spark, Scala, HiveQL, and Impala to process and load data from RDBMS to HDFS, while ensuring data governance, lineage, and quality using Talend and Spark-SQL for advanced transformations.
+    • Collaborated with stakeholders to gather business and technical requirements, perform data analysis, and create data models, while ensuring high data quality, performance tuning, and the optimization of the overall data pipeline efficiency.

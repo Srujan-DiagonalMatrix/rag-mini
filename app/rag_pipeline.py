@@ -1,15 +1,16 @@
 ##############################################
 # This becomes the single “brain” callable used by CLI + API.
 ##############################################
+print("✅ rag_pipeline module loaded:", __name__)
 
-from ingestion import runIngestion
 from pydantic.dataclasses import dataclass
 from typing import Optional
-from retrieval import Retriever, RetriverConfig
-from generation import AnswerGenerator, GenerationConfig
-from vectorstore import VectorStoreManager
-from llm import check_openai_ready
 from langchain_core.documents import Document
+from app.retrieval import Retriever, RetriverConfig
+from app.generation import AnswerGenerator, GenerationConfig
+from app.vectorstore import VectorStoreManager
+from app.llm import check_openai_ready
+from app.ingestion import runIngestion
 
 @dataclass
 class AppConfig:
@@ -91,3 +92,10 @@ class RagPipeline():
             "sources":self._build_sources(docs=docs),
             "top_k": top_k if top_k is not None else self.config.top_k           
         }
+    
+# if __name__ == "__main__":
+#     print("✅ rag_pipeline running as __main__")
+#     pipe = RagPipeline(AppConfig())
+#     out = pipe.ask("What does RAG stand for?", top_k=3)
+#     print(out["answer"])
+#     print("Sources:", [s["source"] for s in out["sources"]])    

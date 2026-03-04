@@ -6,8 +6,8 @@ from langchain_core.documents import Document
 import os
 from langchain_community.document_loaders import DirectoryLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from embeddings import get_embeding_model
-from vectorstore import VectorStoreManager
+from app.embeddings import get_embeding_model
+from app.vectorstore import VectorStoreManager
 
 def loadDocuments(data_dir:str) -> list[Document]:    
     if not os.path.exists(data_dir):
@@ -70,6 +70,4 @@ def runIngestion(dataDir: str = "./data",
 
 # if __name__ == "__main__":
 #     store = runIngestion(dataDir="/home/srujan/Documents/repo/rag-mini/data/", persist_path="./vector_db", dbtype="faiss", chunk_size=500, chunk_overlap=50)
-#     res = store.similarity_search(query="What is this document about?", k=2)
-#     for n in res:
-#         print(n.page_content)
+#     print (type(store).__name__)

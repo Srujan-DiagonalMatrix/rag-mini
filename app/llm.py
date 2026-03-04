@@ -75,3 +75,8 @@ def call_openai_chat(messages: list[dict], model: str, temperature: float, max_t
 
 def check_openai_ready() -> bool:
     return bool(_get_openai_key())
+
+
+# if __name__ == "__main__":
+#     print (get_ollama_embeddings_url(), "Ollama")
+#     print (check_openai_ready(), "OpenAi ready")

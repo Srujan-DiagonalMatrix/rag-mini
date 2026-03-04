@@ -1,9 +1,9 @@
 from __future__ import annotations
 
 from typing import Optional
-from prompts import build_messages, FALLBACK_IDE
-from llm import call_openai_chat
 from pydantic.dataclasses import dataclass
+from app.prompts import build_messages, FALLBACK_IDE
+from app.llm import call_openai_chat
 
 @dataclass
 class GenerationConfig:
@@ -54,12 +54,10 @@ class AnswerGenerator:
         return answer or self.cofig.empty_context_fallback
 
 # if __name__ == "__main__":
-#     fake_context = """
-#     RAG stands for Retrieval-Augmented Generation.
-#     It retrieves relevant chunks and gives them as context to an LLM to produce grounded answers.
-#     If the answer isn't in the context, the system should say it does not know.
-#     """.strip()
-
 #     gen = AnswerGenerator()
-#     question = "What does RAG stands for and how does it work?"
-#     print(gen.generate_answer(question=question, context=fake_context))
+#     fake_context = "RAG stands for Retrieval-Augmented Generation."
+#     ans = gen.generate_answer("What does RAG stand for?", fake_context)
+#     print("Answer:", ans)
+
+#     ans2 = gen.generate_answer("What is the CEO name?", "")
+#     print("Empty-context answer:", ans2)
