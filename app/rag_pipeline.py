@@ -1,10 +1,9 @@
 ##############################################
 # This becomes the single “brain” callable used by CLI + API.
 ##############################################
-print("✅ rag_pipeline module loaded:", __name__)
 
 from pydantic.dataclasses import dataclass
-from typing import Optional
+from typing import Optional, Any
 from langchain_core.documents import Document
 from app.retrieval import Retriever, RetriverConfig
 from app.generation import AnswerGenerator, GenerationConfig
@@ -38,7 +37,7 @@ class RagPipeline():
                                          temperature=self.config.temperature,
                                          max_tokens=self.config.max_tokens))
 
-    def ingest(self) -> dict[str, any]:
+    def ingest(self) -> dict[str, Any]:
         """returns status: created/loaded, doc count, chunk count"""
         store = runIngestion(dataDir=self.config.data_dir, 
                              persist_path=self.config.persist_path,
@@ -51,7 +50,7 @@ class RagPipeline():
             "store_type": type(store).__name__
         }
     
-    def health(self) -> dict[str, any]:
+    def health(self) -> dict[str, Any]:
         """checks: vector DB exists, Ollama reachable (optional ping), OpenAI key present"""
         return{
             "vector_db_exists": VectorStoreManager.exists(self.config.persist_path),
@@ -74,9 +73,10 @@ class RagPipeline():
         
         return sources
 
-    def ask(self, question: str, top_k: Optional[int] = None) -> dict[str, any]:
+    def ask(self, question: str, top_k: Optional[int] = None) -> dict[str, Any]:
         """calls retrieve() → builds context → calls generate_with_sources()
         returns response dict (answer + sources + timings)"""
+
         q = (question or "").strip()
         if not q:
             raise ValueError("Question can't be empty.")
@@ -85,6 +85,14 @@ class RagPipeline():
         context = self.retriver.format_context(docs=docs)
 
         answer = self.generator.generate_answer(question=q, context=context)
+
+        # docs = self.retriver.retrieve(question=q, top_k=top_k)
+        # print("DEBUG: retrieved docs:", len(docs))
+        # for i, d in enumerate(docs):
+        #     print(f"DEBUG DOC {i+1} META:", d.metadata)
+        #     print(f"DEBUG DOC {i+1} TEXT:", (d.page_content or "")[:200])
+        # context = self.retriver.format_context(docs=docs)
+        # print("DEBUG CONTEXT:\n", context[:800])
 
         return {
             "question":q,

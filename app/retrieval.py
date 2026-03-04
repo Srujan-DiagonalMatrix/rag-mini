@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Optional, List
+from typing import Optional, List, Any
 from langchain_core.documents import Document
 from dataclasses import dataclass
 from app.embeddings import get_embeding_model
@@ -48,7 +48,7 @@ class Retriever:
         
         return self.store.similarity_search_with_score(query=question, k=self.config.top_k)
     
-    def health(self) -> dict[str, any]:
+    def health(self) -> dict[str, Any]:
 
         return {
             "vector_db_exists" : VectorStoreManager.exists(self.config.persist_path),

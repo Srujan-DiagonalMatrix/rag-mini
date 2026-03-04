@@ -1,0 +1,2 @@
+RAG stands for Retrieval-Augmented Generation.
+It retrieves relevant chunks and supplies them as context to an LLM.
